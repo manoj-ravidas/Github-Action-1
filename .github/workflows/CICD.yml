@@ -1,0 +1,28 @@
+name: CICD_Pipeline Acrhitech
+
+on: 
+  workflow_dispatch:
+
+jobs:
+
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Cloning to server 
+        run: echo "Clone code succeeds"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Biulding the docker image
+        run: echo "docker image got created"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: testing in progress
+        run: echo " Tested the code no bugs"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment is done
+        run: echo " Deployment is completed successfully"
+  
