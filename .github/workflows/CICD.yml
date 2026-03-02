@@ -2,8 +2,8 @@ name: CICD_Pipeline Acrhitech
 
 on: 
   push:
-    branches: (main)
-    
+    branches: 
+      - main 
 jobs:
 
   code:
