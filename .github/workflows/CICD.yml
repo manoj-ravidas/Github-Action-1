@@ -12,11 +12,13 @@ jobs:
       - name: Code Cloning to server 
         run: echo "Clone code succeeds"
   build:
+    needs: code
     runs-on: ubuntu-latest
     steps:
       - name: Biulding the docker image
         run: echo "docker image got created"
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: testing in progress
