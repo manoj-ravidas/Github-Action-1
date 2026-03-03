@@ -1,9 +1,18 @@
 name: CICD_Pipeline Acrhitech
 
 on: 
-  push:
-    branches: 
-      - main 
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: This is the enviromwnt values where this workflow runs
+        default: dev
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+          - staging 
+    
 jobs:
 
   code:
